@@ -1,0 +1,721 @@
+@charset "utf-8";
+
+body {
+    color: #222222; 
+    height: 100%;
+    font-family: 'Playfair Display', serif;
+
+}
+
+
+.container {
+    max-width: 1200px;
+}
+
+.container__header {
+    background-color: #fffFcc;
+   width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    /* border: 2px solid #bfbfbf; */
+    border-top: none;
+    border-bottom: none;
+    position: fixed;
+   
+
+}
+
+a {text-decoration: none;
+    color: #222222;
+/* リンクの文字を青くならないように指定 */
+}
+
+.img__logo {
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    height:  72px;
+}
+
+.right__header {
+    display: flex;
+    margin-left: auto;
+    
+}
+
+html {scroll-behavior: smooth;}
+
+.button {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 21px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+.button__item {
+    margin-left: 30px;
+    margin-right: 30px;
+    color: white;
+}
+
+
+
+.image {
+    padding-top:120px;
+    width: 100%;
+    height: 500px;
+    
+}
+ 
+/* .image__photo {   
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/mainbg.png);
+    background-position: cover;
+    background-size: center;
+} */
+
+
+--- 全体のBOX定義 ----------------------------------------
+.image__photo {
+    width      : 100%;
+    height     : 500px;
+    padding-top: 120px;
+    overflow   : hidden;
+  }
+  
+  /* --- 背景の指定 ------------------------------------------- */
+  .image__photo .bgImg {
+    position   : absolute;
+    width      : 1200px;
+    height     : 500px;
+    opacity    : 0;
+    animation  : bgAnime 20s infinite;   /* 4画像 × 各5s = 20s */
+    
+  }
+  
+  /* --- 段差で背景画像のアニメーションを実行 ----------------- */
+  .image__photo .src1 {
+    background-image : url(../img/emmental-289142_1280.jpg);   /* 背景の画像を指定 */
+    height     : 500px;
+    background-position: cover;
+    background-size: center;
+  }
+  .image__photo .src2 {
+    background-image : url(../img/mainbg.png);   /* 背景の画像を指定 */
+    animation-delay  : 5s;
+    height     : 500px;
+    background-position: cover;
+    background-size: center;
+  }
+  .image__photo .src3 {
+    background-image : url(../img/wine_cheese.jpg);   /* 背景の画像を指定 */
+    animation-delay  : 10s;
+    height     : 500px;
+    background-position: cover;
+    background-size: center;
+  }
+  .image__photo .src4 {
+    background-image : url(../img/tsumami.jpg);   /* 背景の画像を指定 */
+    animation-delay  : 15s;
+    height     : 500px;
+    background-position: cover;
+    background-size: center;
+  }
+  
+  @keyframes bgAnime {
+     0% { opacity: 0; }
+     5% { opacity: 1; }
+    25% { opacity: 1; }
+    30% { opacity: 0; }
+   100% { opacity: 0; }
+  }
+  
+  /* --- 前面の文字定義（サンプルのため変更してください） ----- */
+  .image__photo .photo__title{
+    position   : absolute;
+    display    : inline-block;
+    
+    /* background : rgba(0, 127, 255, 0.7);          半透明の青 */
+    color      : #fff;
+    top        : 35%;                               /* 中央寄せ */
+    left       : 35%;
+    transform  : translate(-50%,-50%);
+    z-index    : 11;
+
+  }
+
+
+/* .photo__title {
+    text-align:center;
+} */
+
+
+.white {
+    font-size: 30px;
+    color: white;
+    line-height: 60px;
+}
+
+.bold {
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+.yellow {
+    color: #ffd61a;
+}
+
+
+.title1 {
+    padding-top: 50px;
+    padding-bottom: 90px;
+    font-weight: bold;
+    color: red;
+    font-family: 'Pacifico', cursive;
+        font-size: 60px;
+        text-shadow:0.25px 0.25px 0 yellow, -0.25px -0.25px 0  yellow,
+        -1px 1px 0 #707070, 1px -1px 0 #707070,
+        0px 1px 0 #707070,  0-1px 0 #707070,
+        -1px 0 0 #707070, 1px 0 0 #707070;
+}
+
+
+.title2 {
+    text-align: center;
+    color: #222222;
+    text-shadow:0.25px 0.25px 0 white, -0.5px -0.5px 0  white,;
+
+    background: linear-gradient(transparent 60%, #ffff00 0%);    font-size: 36px;
+
+}
+
+.title3 {
+    padding-top: 100px;
+
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 48px;
+    color: yellow;
+
+    text-shadow:1px 1px 0 red, -0.5px -0.5px 0 red,
+              -1px 1px 0 #707070, 1px -1px 0 #707070,
+              0px 1px 0 #707070,  0-1px 0 #707070,
+              -1px 0 0 #707070, 1px 0 0 #707070;
+
+}
+
+
+
+
+.bt_title {
+    font-size: 24px;
+    text-align: center;
+    
+}
+
+.about {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.about__title {
+    font-size: 18px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.about__content {
+    font-size: 16px;
+}
+
+.p1 {
+    padding-top: 40px;
+}
+
+.p2 {
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.p3 {
+    padding-bottom: 40px;
+}
+
+.p4 {
+    padding-bottom: 10px;
+}
+
+.p5 {
+    padding-bottom: 80px;
+}
+
+.slider {
+    padding: 0;
+}
+
+
+
+.burger {
+    width: 400px;
+    padding: 0;
+ }
+
+.farmer {
+    width: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+.cheesecake {
+    width: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+.fondu {
+   width: 400px; 
+   height: 266px;
+   padding: 0;
+}
+
+.pizza_m {
+    width: 400px; 
+    height: 266px;
+    position: cover;
+    padding: 0;
+ }
+
+ .cheese {
+    width: 400px; 
+    height: 266px;
+    position: cover;
+    padding: 0;
+ }
+
+
+
+
+
+.course {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.course__content {
+    padding-top: 30px;
+    font-size: 16px;
+}
+
+.p6 {
+    padding-bottom: 10px;
+}
+
+
+.card__photo img {
+    width: 600px;
+    border-radius: 30%;
+}
+
+.course__card1 {
+    padding-top: 60px;
+    width: 100%;
+    height: 404.69px;
+    display: flex;
+    justify-content: space-around; 
+}
+
+.card1__content {   
+    width: 50%;
+    height: 404.69px;
+    background-color: #fafafa;
+    text-align: left;
+}
+
+.card1__title {
+    padding-top: 120px;
+    padding-left: 50px;
+    font-size: 24px;
+
+}
+
+.card1__comment {
+    font-size: 16px;
+    padding-top: 40px;
+    padding-left: 50px;
+    line-height: 20px;
+    padding-bottom: 120px;
+}
+
+
+
+.course__card2 {
+ 
+    width: 100%;
+    height: 400.88px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+
+.card2__content {
+    width: 50%;
+    height: 400.88px;
+    background-color: #fafafa;
+    padding-right: 50px;
+    text-align: left;
+}
+
+.card2__title {
+    padding-top: 120px;
+    font-size: 24px;
+    padding-left: 100px;
+}
+
+.card2__comment {
+    font-size: 16px;
+    padding-top: 40px;
+    line-height: 20px;
+    padding-left: 100px;
+    padding-bottom: 120px;
+}
+
+
+.course__card3 {
+    padding-top: 0;
+    width: 100%;
+    height: 402.92px;
+    display: flex;
+    justify-content: space-around; 
+}
+
+.card3__content {   
+    width: 50%;
+    height: 402.92px;
+    background-color: #fafafa;
+    text-align: left;
+}
+
+.card3__title {
+    padding-top: 120px;
+    padding-left: 50px;
+    font-size: 24px;
+
+}
+
+.card3__comment {
+    font-size: 16px;
+    padding-top: 40px;
+    padding-left: 50px;
+    line-height: 20px;
+    padding-bottom: 120px;
+}
+
+
+
+.news {
+    text-align: center;
+    padding-top: 60px;
+    
+
+    /* background-image: url(../img/pizzeria.jpg);
+    background-size: cover;
+}
+
+.news__bg {
+    height: 100%;
+    opacity: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     */
+}
+
+.news__title {
+    padding-top: 30px;
+    font-size: 16px;
+}
+
+.news__colum {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10px;
+    gap: 0px 10px;
+}
+
+.news__photo {
+    width: 350px;
+    height: 200pt;
+    object-fit: cover; 
+    /* 写真をサイズトリミングする */
+
+}
+.news__colum1 {
+    width: 300px;
+}
+
+
+.colum1__text {
+    padding-top: 20px;
+    text-align: left;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.colum1__date {
+    padding-top: 30px;
+    padding-bottom: 24px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.MORE {
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+ 
+
+    }
+        
+
+.styled {
+    border:none;
+    width: 300px;
+    height: 60px;
+    margin: 0 auto;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    background-color: #ffffcc;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #222222;
+
+        }
+
+.styled:hover {
+	background-color: #B99b00;
+	border: 1px solid #333;
+}
+
+
+
+.add_photo1 {
+    border-radius: 20px;
+    display: none;
+    padding-top: 30px;
+    padding-left: 400px;
+    width: 200px;
+}
+
+.add_photo2 {
+    border-radius: 20px;
+    display: none;
+    padding-right: 300px;
+    width: 200px;
+
+}
+
+
+
+
+.Access {
+    padding-top: 60px;
+    background-color:#fafafa ;
+
+}
+.access__title {
+    text-align: center;
+    font-size: 16px;
+    padding-top: 30px;
+    
+
+}
+
+.access__text {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 16px;
+}
+
+.map {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.access__info {
+   margin-left: auto;
+   margin-right: auto;
+   font-size: 16px;
+
+}
+
+.info__title {
+    width: 150px;
+    height: 50px;
+}
+
+.info__content {
+    width: 400px;
+ 
+}
+
+.bottom {
+    padding-bottom: 60px;
+
+}
+
+.Contact {
+    padding-top: 60px;
+}
+
+.contact__guide {
+    text-align: center;
+}
+
+
+.contact__title {
+    padding-top: 30px;
+}
+
+
+.contact__text1 {
+    padding-top: 60px;
+}
+
+.contact__text2 {
+    padding-top: 30px;
+}
+
+
+.contact-table {
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 640px;
+    margin-bottom: 30px;
+  }
+
+
+  .contact-item{
+    padding: 20px;
+    border: 1px solid #bfbfbf;
+    border-left: none;
+    /* 枠線の左だけを消している */
+}
+
+
+  .contact-body {
+      padding: 20px;
+      border: 1px solid #bfbfbf;
+      border-right: none;
+  }
+  
+.contact-item {
+     vertical-align: top; 
+     text-align: left;
+      width: 240px;
+      height: 36px;
+     
+  }
+  
+.contact-body {
+      width: 400px;
+  }
+
+  .form-text {
+    width: 326px;
+    padding: 8px;
+    border-radius: 1px;
+    border: 1px solid #bfbfbf;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+}
+
+.form-select {
+    width: 326px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+}
+
+.contact-douki {
+        display: block;
+        align-items: left;
+}
+
+.contact-douki + .contact-douki {
+        margin-top: 24px;
+            /* label同士の間の高さを決めている */
+    }
+    
+.contact-douki-txt {
+        margin-left: 8px;
+        font-size: 12px;
+    }
+
+.form-textarea {
+        width: 326px;
+        padding: 8px;
+        height: 200px;
+        border-radius: 1px;
+        border: 1px solid #bfbfbf;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        /*　↑ 自由記述のフォームをデザインしている */
+    }
+
+
+    .contact-submit {
+        width: 250px;
+        height: 40px;
+        background-color: #ffffcc;
+        color: #222222;
+        font-weight: bold;
+        display: block;
+        margin: 0 auto;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+        margin-bottom: 140px;
+
+        /* contact-submitに対して横幅、背景色、文字色、フォントサイズ、太字、内側に余白、
+        角丸などを指定しています。その他、inputタグはインライン要素なのでblockに変更し、
+        margin: 0 autoで中央寄せをして、appearanceプロパティを指定します。
+        そして最後にマウスカーソルを載せたときにボタンであることを視覚化するために
+        cursor: pointerを指定し完成です。 */
+      }
+
+      .contact-submit:hover {
+        background-color: #B99b00;
+        border: 1px solid #333;
+    }
+    
+
+
+    .footer {
+        text-align: center;
+        background-color: #707070;
+        color: white;
+        font-size:  12px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+
+    }
+ 
